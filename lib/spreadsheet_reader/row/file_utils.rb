@@ -4,13 +4,8 @@ module SpreadsheetReader
   module FileUtils
 
     def original_filename(file)
-      if file.instance_of? File
-        if file.respond_to? :original_filename
-          return file.original_filename
-        else
-          return File.basename file
-        end
-      end
+      return file.original_filename if file.respond_to? :original_filename
+      return File.basename file if file.instance_of? File
       file
     end
 
