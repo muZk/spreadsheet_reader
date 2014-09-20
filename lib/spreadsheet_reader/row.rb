@@ -165,8 +165,8 @@ module SpreadsheetReader
     def self.open_spreadsheet(spreadsheet_file)
       name = FileUtils.original_filename(spreadsheet_file)
       case File.extname name
-        when '.xls' then Roo::Excel.new(spreadsheet_file.path)
-        when '.xlsx' then Roo::Excelx.new(spreadsheet_file.path)
+        when '.xls' then Roo::Excel.new(spreadsheet_file.path, nil, :ignore)
+        when '.xlsx' then Roo::Excelx.new(spreadsheet_file.path, nil, :ignore)
         else false
       end
     end
