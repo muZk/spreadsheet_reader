@@ -10,7 +10,6 @@ Gem::Specification.new do |spec|
   spec.email         = ['ngomez@hasu.cl']
   spec.description   = 'Provides an easy way to add model-based validations to excel files.'
   spec.summary       = 'Provides an easy way to add model-based validations to excel files.'
-  spec.summary       = ''
   spec.homepage      = 'https://github.com/muZk/spreadsheet-reader'
   spec.license       ='MIT'
 
